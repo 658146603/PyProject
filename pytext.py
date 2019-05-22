@@ -1,10 +1,14 @@
-import matplotlib.pyplot as plt
-import numpy as np
-x = np.linspace(0, 10, 1000)
-y=0
-for k in range(1, 10, 1):
-    y=y+4*np.sin((2*k-1)*x)/((2*k-1)*np.pi)
-plt.plot(x,y,'k',color='r',label="w=1",linewidth=3)
-plt.axis([0,10,-1.5,1.5])
-plt.legend()
-plt.show()
+import math
+def main():
+    q=eval(input('输入q的值：'))
+    s=0
+    n=1
+    a=1
+    while abs(a)<10^(-6):
+        s=s+a
+        a=a*q^(1-n)
+        n=n+1        
+    print("s={},n={}".format(s,n))
+
+    
+main()
